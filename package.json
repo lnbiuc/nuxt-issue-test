@@ -13,6 +13,9 @@
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit"
   },
+  "dependencies": {
+    "md-editor-v3": "^4.8.3"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^1.0.0-beta.27",
     "@iconify-json/carbon": "^1.1.21",
