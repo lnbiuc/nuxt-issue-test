@@ -18,6 +18,7 @@ let scrollElement: string | HTMLElement | undefined
 
 onMounted(() => {
   scrollElement = document.documentElement
+  theme.value = color.value === 'light' ? 'light' : 'dark'
 })
 </script>
 
