@@ -10,15 +10,15 @@ const color = useColorMode()
 
 const theme = ref<'light' | 'dark'>(color.value === 'dark' ? 'dark' : 'light')
 
-watchEffect(() => {
-  theme.value = color.value === 'light' ? 'light' : 'dark'
+watch(() => color.value, () => {
+  theme.value = color.value === 'dark' ? 'dark' : 'light'
 })
 
 let scrollElement: string | HTMLElement | undefined
 
 onMounted(() => {
   scrollElement = document.documentElement
-  theme.value = color.value === 'light' ? 'light' : 'dark'
+  theme.value = color.value === 'dark' ? 'dark' : 'light'
 })
 </script>
 
